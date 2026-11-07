@@ -1,23 +1,171 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0a0910"><meta name="description" content="Old Five Nights Tower Defense — November 2026 public update roadmap.">
-<title>OFNTD | November 2026 Roadmap</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a0910">
+<meta name="description" content="Old Five Nights Tower Defense public update roadmap.">
+<title>OFNTD | Public Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
-:root{color-scheme:dark;--bg:#09090d;--panel:#14121c;--muted:#a7a1b5;--purple:#a77aff;--line:#332a43;--white:#f6f1ff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:'DM Sans',Arial,sans-serif;min-height:100vh;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.1;background:repeating-linear-gradient(0deg,transparent 0 3px,#a49ba8 4px 5px);mix-blend-mode:screen}body:after{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 80% 0%,#5d237c35,transparent 48%),radial-gradient(ellipse at 10% 60%,#321a4b30,transparent 50%);z-index:-1}.wrap{max-width:1140px;margin:auto;padding:0 28px}.top{border-bottom:1px solid #ffffff18;background:#0b0a10e8;backdrop-filter:blur(14px);position:sticky;top:0;z-index:10}.nav{height:75px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font:900 27px 'Barlow Condensed',Impact,sans-serif;letter-spacing:2px;color:white;text-decoration:none}.brand span{color:var(--purple)}.navright{display:flex;align-items:center;gap:20px}.navright a{color:#c9c3d3;text-decoration:none;font-size:13px;font-weight:700}.live{font-size:11px;font-weight:800;letter-spacing:1.5px;color:#d6bbff;border:1px solid #7d53b65c;border-radius:100px;padding:10px 13px;background:#a77aff13}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#bc91ff;margin-right:7px;box-shadow:0 0 10px #a77aff}.hero{padding:100px 0 80px;position:relative}.eyebrow{color:#bb91ff;font-size:12px;font-weight:800;letter-spacing:3.2px;margin-bottom:21px}.hero h1{font:900 clamp(72px,12vw,152px)/.8 'Barlow Condensed',Impact,sans-serif;letter-spacing:-1px;margin:0;text-shadow:0 0 55px #8544b03d}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px #b387e9;letter-spacing:2px}.hero p{max-width:590px;font-size:16px;line-height:1.8;color:#b9b1c5;margin:30px 0}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:15px 22px;border-radius:6px;text-decoration:none;font-size:12px;letter-spacing:1.4px;font-weight:800;display:inline-flex;align-items:center;gap:10px}.primary{background:#a77aff;color:#100a18;box-shadow:0 8px 34px #a77aff33}.secondary{border:1px solid #574368;color:#e9ddf8}.hero-decoration{position:absolute;right:6%;top:95px;font:900 250px/.8 'Barlow Condensed',sans-serif;color:#a77aff08;pointer-events:none;transform:rotate(-10deg)}.divider{height:1px;background:linear-gradient(90deg,#a77aff88,#39234b,transparent)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:65px 0 27px}.kicker{font-size:11px;color:var(--purple);font-weight:800;letter-spacing:2.5px}.section-head h2{font:800 45px 'Barlow Condensed',sans-serif;margin:6px 0 0;letter-spacing:1px}.subtle{font-size:12px;color:var(--muted)}.timeline{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:linear-gradient(150deg,#1d1827,#111017 75%);border:1px solid #3d304d;border-radius:11px;overflow:hidden;position:relative;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-4px);border-color:#9566c5}.card:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#a77aff,#55336c,transparent)}.card-top{padding:28px 28px 18px}.meta{display:flex;justify-content:space-between;align-items:center;gap:8px}.date{font-size:12px;font-weight:800;letter-spacing:2px;color:#d0a9ff}.status{font-size:10px;letter-spacing:1px;font-weight:800;padding:7px 10px;border-radius:4px;border:1px solid #5a496d;color:#c5b5d7;background:#ffffff08}.status.released{color:#91e2b1;border-color:#337b56;background:#14332255}.status.today{color:#ffd18d;border-color:#916132;background:#4b301555}.card h3{font:800 37px/1.04 'Barlow Condensed',sans-serif;letter-spacing:.4px;margin:25px 0 12px}.desc{color:#aaa2b5;font-size:13px;line-height:1.65;min-height:42px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0 8px}.tag{background:#a77aff12;border:1px solid #684d813d;color:#cbb4e8;font-size:11px;padding:7px 9px;border-radius:4px}.card-bottom{border-top:1px solid #ffffff12;padding:19px 28px 23px;background:#ffffff03;display:flex;align-items:center;justify-content:space-between;gap:10px}.count-label{font-size:10px;color:#91879e;letter-spacing:1.3px;font-weight:800}.count{font:800 22px 'Barlow Condensed',sans-serif;letter-spacing:1px;color:#e8d9fa;text-align:right}.number{position:absolute;right:23px;top:55px;font:900 92px 'Barlow Condensed',sans-serif;color:#ffffff05;pointer-events:none}.notice{border:1px solid #4a3a59;background:#1c1624;border-radius:8px;margin:32px 0 75px;padding:21px 25px;display:flex;align-items:start;gap:14px;color:#b9b0c5;font-size:13px;line-height:1.7}.notice strong{color:#e7d5fa}.notice-icon{color:#c49bff;font-size:21px}.footer{border-top:1px solid #ffffff18;padding:30px 0 45px;color:#7d748b;font-size:12px}.footinner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer strong{color:#c4a0e8}.flicker{animation:flicker 8s infinite}@keyframes flicker{0%,96%,98%,100%{opacity:1}97%{opacity:.76}99%{opacity:.88}}@media(max-width:680px){.wrap{padding:0 18px}.nav{height:64px}.navright a{display:none}.hero{padding:80px 0 64px}.hero h1{font-size:clamp(65px,18vw,110px)}.hero-decoration{display:none}.timeline{grid-template-columns:1fr}.section-head h2{font-size:38px}.card h3{font-size:34px}.card-top{padding:24px 22px 14px}.card-bottom{padding:18px 22px}.hero p{font-size:14px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* THEME: You can also change these values in CONFIG.theme below. */
+:root{color-scheme:dark;--bg:#09090d;--panel:#17131f;--accent:#a77aff;--text:#f6f1ff;--muted:#aaa1b9;--border:#423451;--glow:#a77aff35}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:'DM Sans',Arial,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.075;background:repeating-linear-gradient(0deg,transparent 0 3px,#aaa 4px 5px)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 80% 0%,var(--glow),transparent 48%),radial-gradient(ellipse at 10% 60%,var(--glow),transparent 52%)}
+.wrap{max-width:1120px;margin:auto;padding:0 24px}.top{position:sticky;top:0;z-index:10;background:#0b0a10e8;border-bottom:1px solid #ffffff18;backdrop-filter:blur(14px)}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font:900 26px 'Barlow Condensed',Impact,sans-serif;letter-spacing:1.5px;text-decoration:none;color:var(--text)}.brand span{color:var(--accent)}.navright{display:flex;align-items:center;gap:20px}.navright a{color:var(--text);text-decoration:none;font-size:12px;font-weight:700}.pill{font-size:10px;font-weight:800;letter-spacing:1.3px;border:1px solid var(--border);border-radius:99px;padding:10px 13px;color:var(--accent)}
+.hero{padding:94px 0 78px;position:relative}.eyebrow,.kicker{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:2.7px}.hero h1{font:900 clamp(68px,12vw,144px)/.82 'Barlow Condensed',Impact,sans-serif;letter-spacing:-1px;margin:24px 0 0}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--accent)}.hero p{max-width:600px;color:var(--muted);font-size:15px;line-height:1.85;margin:30px 0}.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:13px 19px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:1px;transition:transform .18s,filter .18s}.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}.primary{background:var(--accent);color:#100a18}.secondary{border:1px solid var(--border);color:var(--text)}.hero-mark{position:absolute;right:6%;top:75px;font:900 240px/.9 'Barlow Condensed',sans-serif;color:var(--glow);opacity:.35;pointer-events:none;transform:rotate(-10deg)}.divider{height:1px;background:linear-gradient(90deg,var(--accent),var(--border),transparent)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin:64px 0 26px}.section-head h2{font:800 45px 'Barlow Condensed',sans-serif;margin:7px 0 0}.subtle{font-size:12px;color:var(--muted)}.timeline{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:linear-gradient(150deg,var(--panel),#100f16 90%);border:1px solid var(--border);border-radius:11px;overflow:hidden;position:relative;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-3px);border-color:var(--accent)}.card::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--accent),transparent)}.card-top{padding:28px 28px 20px}.meta{display:flex;justify-content:space-between;align-items:center;gap:12px}.date{font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--accent)}.status{font-size:10px;letter-spacing:.7px;font-weight:800;padding:7px 9px;border-radius:5px;border:1px solid var(--border);color:var(--text);background:#ffffff08;white-space:nowrap}.status.released{color:#a0ebbd;border-color:#357c56;background:#153d2655}.status.today{color:#ffd18d;border-color:#916132;background:#4b301555}.status.delayed{color:#ffb0ad;border-color:#a24b49;background:#51202055}.card h3{font:800 37px/1.04 'Barlow Condensed',sans-serif;margin:26px 0 12px}.desc{font-size:13px;line-height:1.75;color:var(--muted);min-height:46px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0 4px}.tag{font-size:11px;color:var(--text);background:var(--glow);border:1px solid var(--border);border-radius:4px;padding:7px 9px}.card-bottom{border-top:1px solid #ffffff12;padding:18px 28px 22px;background:#ffffff03;display:flex;align-items:center;justify-content:space-between;gap:12px}.count-label{font-size:10px;color:var(--muted);letter-spacing:1.2px;font-weight:800}.count{font:800 21px 'Barlow Condensed',sans-serif;text-align:right;letter-spacing:.4px}.number{position:absolute;right:22px;top:55px;font:900 90px 'Barlow Condensed',sans-serif;color:#ffffff07;pointer-events:none}.notice{border:1px solid var(--border);background:var(--panel);border-radius:9px;margin:34px 0 75px;padding:22px 24px;color:var(--muted);font-size:13px;line-height:1.7}.notice strong{color:var(--text)}.footer{border-top:1px solid #ffffff18;padding:28px 0 42px;color:var(--muted);font-size:12px}.footinner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer strong{color:var(--accent)}.footer a{color:var(--accent)}
+@media(max-width:700px){.wrap{padding:0 18px}.nav{min-height:64px}.navright .nav-link{display:none}.hero{padding:74px 0 60px}.hero h1{font-size:clamp(62px,18vw,110px)}.hero-mark{display:none}.timeline{grid-template-columns:1fr}.section-head h2{font-size:37px}.card-top{padding:24px 22px 16px}.card-bottom{padding:18px 22px}.card h3{font-size:34px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap nav"><a href="#home" class="brand">OLD FIVE NIGHTS <span>TD</span></a><div class="navright"><a href="#roadmap">ROADMAP</a><span class="live"><span class="dot"></span>PUBLIC ROADMAP</span></div></div></header>
-<main id="home"><div class="wrap"><section class="hero"><div class="hero-decoration" aria-hidden="true">05</div><div class="eyebrow">// THE NEXT CHAPTER AWAITS</div><h1 class="flicker">NOVEMBER<span>ROADMAP.</span></h1><p>Four weeks. Four major updates. Discover what's coming to <strong>Old Five Nights Tower Defense</strong> this November. The nights are only getting harder.</p><div class="actions"><a class="btn primary" href="#roadmap">EXPLORE UPDATES <span aria-hidden="true">↘</span></a><a class="btn secondary" href="#info">RELEASE INFO <span aria-hidden="true">→</span></a></div></section><div class="divider"></div><section id="roadmap" aria-labelledby="roadmap-title"><div class="section-head"><div><div class="kicker">// 2026 RELEASE SCHEDULE</div><h2 id="roadmap-title">WHAT'S COMING NEXT</h2></div><span class="subtle">4 SCHEDULED UPDATES &nbsp; / &nbsp; NOVEMBER 2026</span></div><div class="timeline">
-<article class="card" data-date="2026-11-07"><div class="number">01</div><div class="card-top"><div class="meta"><span class="date">NOV 07, 2026</span><span class="status" aria-live="polite">UPCOMING</span></div><h3>ENDLESS REWORK</h3><div class="desc">A refreshed Endless experience, the arrival of Endless 4, and a new exclusive present.</div><div class="tags"><span class="tag">♾ Endless Rework</span><span class="tag">🏰 Endless 4</span><span class="tag">🎁 Biweekly Exclusive Present</span></div></div><div class="card-bottom"><span class="count-label">RELEASE COUNTDOWN</span><span class="count" aria-live="off">LOADING...</span></div></article>
-<article class="card" data-date="2026-11-14"><div class="number">02</div><div class="card-top"><div class="meta"><span class="date">NOV 14, 2026</span><span class="status" aria-live="polite">UPCOMING</span></div><h3>EVOS + APEX 👀</h3><div class="desc">Evolutions are on the horizon. And Apex? You'll have to wait and see...</div><div class="tags"><span class="tag">⚡ Evos</span><span class="tag">👀 Apex</span><span class="tag">❔ Mystery</span></div></div><div class="card-bottom"><span class="count-label">RELEASE COUNTDOWN</span><span class="count" aria-live="off">LOADING...</span></div></article>
-<article class="card" data-date="2026-11-21"><div class="number">03</div><div class="card-top"><div class="meta"><span class="date">NOV 21, 2026</span><span class="status" aria-live="polite">UPCOMING</span></div><h3>MILITARY PART 2</h3><div class="desc">The military update continues, alongside a brand-new AFK present.</div><div class="tags"><span class="tag">🪖 Military Part 2</span><span class="tag">🎁 New AFK Present</span></div></div><div class="card-bottom"><span class="count-label">RELEASE COUNTDOWN</span><span class="count" aria-live="off">LOADING...</span></div></article>
-<article class="card" data-date="2026-11-28"><div class="number">04</div><div class="card-top"><div class="meta"><span class="date">NOV 28, 2026</span><span class="status" aria-live="polite">UPCOMING</span></div><h3>SEASON 4</h3><div class="desc">A new season begins. More details will be revealed closer to release.</div><div class="tags"><span class="tag">🌟 Season 4</span><span class="tag">🔒 More Soon</span></div></div><div class="card-bottom"><span class="count-label">RELEASE COUNTDOWN</span><span class="count" aria-live="off">LOADING...</span></div></article>
-</div></section><aside class="notice" id="info"><span class="notice-icon">ⓘ</span><div><strong>DEVELOPER NOTICE</strong><div>These are planned release dates and may change as development progresses. Countdowns use midnight at the start of each listed date in your device's local time, not an official launch hour. A date passing does not confirm an update has launched.</div></div></aside></div></main><footer class="footer"><div class="wrap footinner"><span>© 2026 <strong>OLD FIVE NIGHTS TOWER DEFENSE</strong></span><span>STAY ALERT. SURVIVE THE NIGHT.</span></div></footer>
+<header class="top"><div class="wrap nav"><a class="brand" href="#home" id="brand">OLD FIVE NIGHTS <span>TD</span></a><div class="navright"><a class="nav-link" href="#roadmap">ROADMAP</a><span class="pill">● PUBLIC ROADMAP</span></div></div></header>
+<main id="home"><div class="wrap"><section class="hero"><div class="hero-mark" aria-hidden="true">05</div><div class="eyebrow" id="eyebrow"></div><h1 id="hero-title"></h1><p id="hero-description"></p><div class="actions"><a class="btn primary" href="#roadmap">EXPLORE UPDATES ↘</a><a class="btn secondary" href="#info">RELEASE INFO →</a></div></section><div class="divider"></div><section id="roadmap" aria-labelledby="roadmap-title"><div class="section-head"><div><div class="kicker" id="schedule-kicker"></div><h2 id="roadmap-title">WHAT'S COMING NEXT</h2></div><span class="subtle" id="update-total"></span></div><div class="timeline" id="timeline"></div></section><aside class="notice" id="info"><strong>ⓘ DEVELOPER NOTICE</strong><div id="notice-text"></div></aside></div></main>
+<footer class="footer"><div class="wrap footinner"><span id="copyright"></span><span id="footer-message"></span></div></footer>
 <script>
-(function(){const cards=[...document.querySelectorAll('.card')];function tick(){const now=new Date();for(const card of cards){const [y,m,d]=card.dataset.date.split('-').map(Number);const target=new Date(y,m-1,d);const diff=target-now;const status=card.querySelector('.status');const count=card.querySelector('.count');status.className='status';if(diff>0){status.textContent='UPCOMING';const days=Math.floor(diff/86400000),hrs=Math.floor(diff%86400000/3600000),mins=Math.floor(diff%3600000/60000),secs=Math.floor(diff%60000/1000);count.textContent=`${days}D ${String(hrs).padStart(2,'0')}H ${String(mins).padStart(2,'0')}M ${String(secs).padStart(2,'0')}S`;}else if(now.getFullYear()===y&&now.getMonth()===m-1&&now.getDate()===d){status.textContent='SCHEDULED TODAY';status.classList.add('today');count.textContent='RELEASE DATE TODAY';}else{status.textContent='DATE PASSED';count.textContent='AWAITING CONFIRMATION';}}}tick();setInterval(tick,1000)})();
+'use strict';
+/* ==============================================================
+   OFNTD ROADMAP SETTINGS — EDIT THIS SECTION ONLY!
+   Date format: YYYY-MM-DDTHH:mm:ss+01:00 (include UTC offset).
+   Use a real release time and offset when announced.
+   Status: "auto", "released", "delayed", "development", "upcoming".
+   "auto" shows SCHEDULED TODAY or DATE PASSED, never RELEASED.
+   To add an update, copy one object in the updates array.
+   ============================================================= */
+const CONFIG = {
+  gameName: 'Old Five Nights Tower Defense',
+  brandHTML: 'OLD FIVE NIGHTS <span>TD</span>', // Trusted HTML; only edit yourself
+  month: 'NOVEMBER',
+  year: 2026,
+  tagline: '// THE NEXT CHAPTER AWAITS',
+  heroDescription: 'Four weeks. Four major updates. Discover what’s coming to Old Five Nights Tower Defense this November. The nights are only getting harder.',
+  footerMessage: 'STAY ALERT. SURVIVE THE NIGHT.',
+  // Add links here if you want buttons to appear in the hero:
+  links: [
+    // { label: 'JOIN DISCORD', url: 'https://discord.gg/YOURINVITE' },
+    // { label: 'PLAY ON ROBLOX', url: 'https://www.roblox.com/games/YOURGAMEID' },
+  ],
+  theme: {
+    background: '#09090d',
+    panel: '#17131f',
+    accent: '#a77aff',
+    text: '#f6f1ff',
+    muted: '#aaa1b9',
+    border: '#423451'
+  },
+  updates: [
+    {
+      date: '2026-11-07T00:00:00+01:00',
+      title: 'ENDLESS REWORK',
+      description: 'A refreshed Endless experience, the arrival of Endless 4, and a new exclusive present.',
+      tags: ['♾ Endless Rework', '🏰 Endless 4', '🎁 Biweekly Exclusive Present'],
+      status: 'auto'
+    },
+    {
+      date: '2026-11-14T00:00:00+01:00',
+      title: 'EVOS',
+      description: 'Evolutions are on the horizon. You’ll have to wait and see...',
+      tags: ['⚡ Evos', '❔ Mystery'],
+      status: 'auto'
+    },
+    {
+      date: '2026-11-21T00:00:00+01:00',
+      title: 'MILITARY PART 2',
+      description: 'The military update continues, alongside a brand-new AFK present.',
+      tags: ['🪖 Military Part 2', '🎁 New AFK Present'],
+      status: 'auto'
+    },
+    {
+      date: '2026-11-28T00:00:00+01:00',
+      title: 'SEASON 4',
+      description: 'A new season begins. More details will be revealed closer to release.',
+      tags: ['🌟 Season 4', '🔒 More Soon'],
+      status: 'auto'
+    }
+  ]
+};
+/* ===================== WEBSITE ENGINE ===================== */
+const $ = id => document.getElementById(id);
+const root = document.documentElement;
+for (const [key, value] of Object.entries(CONFIG.theme)) {
+  const names = {background:'bg',panel:'panel',accent:'accent',text:'text',muted:'muted',border:'border'};
+  if (names[key] && /^#[0-9a-f]{6}$/i.test(value)) root.style.setProperty('--'+names[key], value);
+}
+// Accent glow uses CSS color-mix where supported; fallback is the default purple.
+root.style.setProperty('--glow', `color-mix(in srgb, var(--accent) 19%, transparent)`);
+document.title = `OFNTD | ${CONFIG.month} ${CONFIG.year} Roadmap`;
+$('brand').innerHTML = CONFIG.brandHTML;
+$('eyebrow').textContent = CONFIG.tagline;
+$('hero-title').append(document.createTextNode(CONFIG.month));
+const titleLine = document.createElement('span'); titleLine.textContent = 'ROADMAP.'; $('hero-title').append(titleLine);
+$('hero-description').textContent = CONFIG.heroDescription;
+$('schedule-kicker').textContent = `// ${CONFIG.year} RELEASE SCHEDULE`;
+$('update-total').textContent = `${CONFIG.updates.length} SCHEDULED UPDATES / ${CONFIG.month} ${CONFIG.year}`;
+$('copyright').textContent = `© ${CONFIG.year} ${CONFIG.gameName.toUpperCase()}`;
+$('footer-message').textContent = CONFIG.footerMessage;
+$('notice-text').textContent = 'These dates are planned and may change. Countdown times use the UTC offset entered in the site settings. A date passing does not confirm an update was released. The developer controls release status manually.';
+const actions = document.querySelector('.actions');
+for (const link of CONFIG.links) {
+  try {
+    const url = new URL(link.url);
+    if (!['https:', 'http:'].includes(url.protocol)) continue;
+    const a = document.createElement('a');a.className='btn secondary';a.href=url.href;a.textContent=link.label;a.target='_blank';a.rel='noopener noreferrer';actions.append(a);
+  } catch { /* Skip invalid URLs */ }
+}
+const cards = [];
+const sortedUpdates = [...CONFIG.updates].sort((a,b)=>Date.parse(a.date)-Date.parse(b.date));
+for (const [index, update] of sortedUpdates.entries()) {
+  const releaseTime = Date.parse(update.date);
+  if (!Number.isFinite(releaseTime)) { console.warn('Invalid update date:', update.title); continue; }
+  const article = document.createElement('article');article.className='card';
+  const number = document.createElement('div');number.className='number';number.textContent=String(index+1).padStart(2,'0');article.append(number);
+  const top = document.createElement('div');top.className='card-top';
+  const meta = document.createElement('div');meta.className='meta';
+  const date = document.createElement('span');date.className='date';
+  date.textContent = new Intl.DateTimeFormat('en-US',{month:'short',day:'2-digit',year:'numeric',timeZone:'UTC'}).format(new Date(update.date.slice(0,10)+'T12:00:00Z')).toUpperCase();
+  const status = document.createElement('span');status.className='status';status.textContent='UPCOMING';
+  meta.append(date,status);
+  const heading = document.createElement('h3');heading.textContent=update.title;
+  const description = document.createElement('div');description.className='desc';description.textContent=update.description;
+  const tags = document.createElement('div');tags.className='tags';
+  for (const tagText of update.tags) {const tag=document.createElement('span');tag.className='tag';tag.textContent=tagText;tags.append(tag)}
+  top.append(meta,heading,description,tags);
+  const bottom = document.createElement('div');bottom.className='card-bottom';
+  const countLabel = document.createElement('span');countLabel.className='count-label';countLabel.textContent='RELEASE COUNTDOWN';
+  const count = document.createElement('span');count.className='count';count.textContent='CALCULATING...';
+  bottom.append(countLabel,count);article.append(top,bottom);$('timeline').append(article);
+  cards.push({update,releaseTime,status,count,countLabel});
+}
+function updateCountdowns() {
+  const now=Date.now();
+  for (const {update,releaseTime,status,count,countLabel} of cards) {
+    const remaining=releaseTime-now;
+    let label='UPCOMING', detail='', kind='';
+    const override=String(update.status||'auto').toLowerCase();
+    if (override==='released') {label='RELEASED';detail='UPDATE RELEASED';kind='released'}
+    else if (override==='delayed') {label='DELAYED';detail='NEW DATE TO BE ANNOUNCED';kind='delayed'}
+    else if (override==='development') {label='IN DEVELOPMENT';detail='WORK IN PROGRESS'}
+    else if (override==='upcoming' || remaining>0) {
+      label='UPCOMING';
+      const seconds=Math.max(0,Math.ceil(remaining/1000));
+      const days=Math.floor(seconds/86400), hours=Math.floor(seconds%86400/3600), minutes=Math.floor(seconds%3600/60), secs=seconds%60;
+      detail=`${days}D ${String(hours).padStart(2,'0')}H ${String(minutes).padStart(2,'0')}M ${String(secs).padStart(2,'0')}S`;
+    } else if (remaining > -86400000) {label='SCHEDULED TODAY';detail='RELEASE DATE TODAY';kind='today'}
+    else {label='DATE PASSED';detail='AWAITING CONFIRMATION'}
+    if (status.textContent!==label) status.textContent=label;
+    status.className='status'+(kind?' '+kind:'');
+    if (count.textContent!==detail) count.textContent=detail;
+    countLabel.textContent=override==='released'?'STATUS':override==='delayed'?'SCHEDULE':'RELEASE COUNTDOWN';
+  }
+}
+updateCountdowns();
+// Only update once per second while the page is visible.
+let timer=null;
+function syncTimer(){if(document.hidden){clearInterval(timer);timer=null}else{updateCountdowns();if(timer===null)timer=setInterval(updateCountdowns,1000)}}
+document.addEventListener('visibilitychange',syncTimer);syncTimer();
 </script>
-</body></html>
+</body>
+</html>
